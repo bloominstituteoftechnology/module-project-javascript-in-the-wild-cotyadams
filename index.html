@@ -97,8 +97,9 @@
     // processBooleans([1, 0, 0, 1, 0]) // should return ["Y", "N", "N", "Y", "N"]
     // ❗ Notes
     // 🧠 Using map, arrow function syntax, and the ternary, you can make this function a short one-liner
-    const processBooleans = () => {
-
+    const processBooleans = (array) => {
+      let final_array = array.map((number => number === 1 ? number = 'Y': number = 'N'))
+      return final_array;
     }
 
     // 👉 CHALLENGE 6
@@ -111,7 +112,12 @@
     // 🧠 Split the string but do not use the reverse method of arrays. Let's do it manually.
     // 🧠 We suggest using a for loop. Research how to loop backwards over an array, starting at the last element.
     // 🧠 Use a ternary in the return statement.
-    const reverseString = () => {
+    const reverseString = (string) => {
+      let final_string = ''
+      for (let i = string.length - 1; i >= 0; i--) {
+        final_string += string.at(i)
+      }
+      return final_string === string ? "It's a palindrome!" : final_string;
 
     }
 
